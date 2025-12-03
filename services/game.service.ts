@@ -1,5 +1,5 @@
 import axiosInstance from "./axiosInstance";
-import { Game, GameResponse } from "../types/game";
+import { Game, GameResponse, GetGameResponse } from "../types/game";
 
 export const gameService = {
   // 1. POST /api/games
@@ -12,10 +12,10 @@ export const gameService = {
 
   // 2. GET /api/games/{gameId}
   getGameById: async (gameId: number): Promise<Game> => {
-    const response = await axiosInstance.get<Game>(`/api/games/${gameId}`);
-    console.log(response);
+    const response = await axiosInstance.get<GetGameResponse>(`/api/games/${gameId}`);
+    console.log("GET /api/games/{gameId}", response.data.data[0]);
 
-    return response.data;
+    return response.data.data[0];
   },
 
   // 3. POST /api/games/search

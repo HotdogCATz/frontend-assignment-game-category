@@ -2,16 +2,18 @@ version: '3.8'
 
 services:
   frontend:
-    container_name: nextjs-game-app
+    container_name: game-list
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_BASE_URL_API: https://fe-test-api.midassoft.dev/
     restart: always
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - NEXT_PUBLIC_API_URL=https://fe-test-api.midassoft.dev/
+      - NEXT_PUBLIC_BASE_URL_API=https://fe-test-api.midassoft.dev/
     networks:
       - app-network
 

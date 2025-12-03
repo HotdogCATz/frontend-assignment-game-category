@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Wutthichai Patthaisong
 
-First, run the development server:
+# Game List Assignment
+
+## 🛠 Tech Stack ที่ใช้
+
+* **Framework:** Next.js 15 (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Data Fetching:** Axios (Service Layer Pattern)
+* **Icons:** Lucide React
+* **Deployment/Container:** Docker & Docker Compose
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites (สิ่งที่ต้องมี)
+* Node.js (v18 หรือสูงกว่า)
+* npm หรือ yarn
+
+### 2. Installation (การติดตั้ง)
+
+Clone โปรเจกต์และติดตั้ง Dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# ติดตั้ง dependencies
+npm install
+# หรือ
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Run Locally (รันบนเครื่อง)
+เริ่มการทำงานในโหมด Development:
+```
+npm run dev
+```
+เปิด Browser ไปที่ http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
+## 🐋Run with Docker (แนะนำ)
+เพื่อให้มั่นใจว่าทำงานได้เหมือน Production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ตรวจสอบว่าเปิด Docker Desktop แล้ว
 
-## Learn More
+รันคำสั่ง:
+```
+docker-compose up -d --build
+```
+เปิด Browser ไปที่ http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+หากต้องการหยุดการทำงาน:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+docker-compose down
+```

@@ -20,5 +20,46 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  height: 100vh;
+  background-color: #1d1d1d;
+  color: #ffffff;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, /* Horizontal grid lines */ 50px 50px;
+  /* Vertical grid lines */
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.particle {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: #001aff;
+  border-radius: 50%;
+  animation: float 8s infinite ease-in-out;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.particle:nth-child(odd) {
+  background: #0094f6;
+  animation-delay: -2s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-100px) rotate(180deg);
+    opacity: 0.5;
+  }
 }

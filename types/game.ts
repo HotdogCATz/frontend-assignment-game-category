@@ -23,3 +23,7 @@ export interface GameResponse {
     length: number;
     totalPage: number;
 }
+
+export interface GetGameResponse {
+    data: Game[];
+}

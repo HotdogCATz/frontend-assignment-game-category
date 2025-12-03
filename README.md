@@ -5,7 +5,7 @@
 
 ## 🛠 Tech Stack ที่ใช้
 
-* **Framework:** Next.js 15 (App Router)
+* **Framework:** Next.js (App Router)
 * **Language:** TypeScript
 * **Styling:** Tailwind CSS
 * **Data Fetching:** Axios (Service Layer Pattern)
@@ -17,7 +17,7 @@
 ## 🚀 Getting Started
 
 ### 1. Prerequisites (สิ่งที่ต้องมี)
-* Node.js (v18 หรือสูงกว่า)
+* Node.js (v21 หรือสูงกว่า)
 * npm หรือ yarn
 
 ### 2. Installation (การติดตั้ง)

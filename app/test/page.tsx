@@ -1,4 +1,4 @@
-"use client"; // ใช้ Client Component เพื่อความง่ายในการ demo (ใช้ useEffect)
+"use client";
 
 import { useEffect, useState } from "react";
 import { gameService } from "@/services/game.service";

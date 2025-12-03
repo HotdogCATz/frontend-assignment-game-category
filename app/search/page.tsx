@@ -3,7 +3,7 @@ import Link from "next/link";
 import { gameService } from "@/services/game.service";
 import Card from "@/components/features/card/card";
 import { GameSummary } from "@/types/game";
-import { SearchX, Gamepad2 } from "lucide-react"; // เพิ่ม Icon เพื่อความสวยงาม
+import { SearchX, Gamepad2 } from "lucide-react";
 
 export default async function SearchPage({
   searchParams,
@@ -13,7 +13,6 @@ export default async function SearchPage({
   const { q } = await searchParams;
   const query = q || "";
 
-  // กรณีไม่มี Query
   if (!query) {
     return (
       <div className="min-h-screen pt-32 px-4 text-center bg-[#0f1115]">
